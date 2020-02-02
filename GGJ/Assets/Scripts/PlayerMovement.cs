@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }*/
 
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Spikes")
         {
@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = startingPosition;
         }
         
-    }
+    }*/
 
 
 }

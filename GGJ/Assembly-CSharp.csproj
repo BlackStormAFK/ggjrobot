@@ -70,8 +70,8 @@
     <Compile Include="Assets\Scripts\MazeLoader.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerPickUp.cs" />
     <Compile Include="Assets\Scripts\SpikeCol.cs" />
-    <Compile Include="Assets\seethrough.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Kuro/Desktop/Folder/GGJ/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

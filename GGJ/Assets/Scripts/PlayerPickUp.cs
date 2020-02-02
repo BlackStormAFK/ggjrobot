@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerPickUp : MonoBehaviour
 {
+    public GameObject heart, leftHand, rightHand, body;
+    
     /*
     // Start is called before the first frame update
     void Start()
@@ -24,18 +26,22 @@ public class PlayerPickUp : MonoBehaviour
         {
             case "leftHand":
                 other.gameObject.SetActive(false);
+                leftHand.SetActive(true);
                 break;
 
             case "rightHand":
                 other.gameObject.SetActive(false);
+                rightHand.SetActive(true);
                 break;
 
             case "body":
                 other.gameObject.SetActive(false);
+                body.SetActive(true);
                 break;
 
             case "heart":
                 other.gameObject.SetActive(false);
+                heart.SetActive(true);
                 break;
 
             default:

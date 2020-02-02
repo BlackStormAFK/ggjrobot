@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sandbox.unity
     guid: 03ace6102d521654d82119a05e91f81e
+  - enabled: 1
+    path: Assets/WON.unity
+    guid: 1506fca46a6c1c3489790b124331ac64
   m_configObjects: {}

@@ -100,18 +100,21 @@ public class PlayerPickUp : MonoBehaviour
     {
         
     }
-
+    */
     // Update is called once per frame
     void Update()
     {
-        
-    }*/
+        if(heart.activeInHierarchy && leftHand.activeInHierarchy && rightHand.activeInHierarchy && body.activeInHierarchy)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     { 
         //if (other.gameObject.CompareTag("Collectables"))
       //  {
-            SetPartsCollected(GetPartsCollected()+1);
+           // SetPartsCollected(GetPartsCollected()+1);
             string ObjectName = other.gameObject.name;
             switch (ObjectName)
             {

@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         //controller = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         startingPosition = this.transform.position;

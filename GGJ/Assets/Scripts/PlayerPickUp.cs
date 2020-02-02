@@ -116,31 +116,38 @@ public class PlayerPickUp : MonoBehaviour
             switch (ObjectName)
             {
                 case "leftHand":
-                    other.gameObject.SetActive(false);
+                SetPartsCollected(GetPartsCollected() + 1);
+                other.gameObject.SetActive(false);
                     leftHand.SetActive(true);
                     SetOLH(GetPartsCollected());
                     PleftHand = other.gameObject;
                     break;
 
                 case "rightHand":
-                    other.gameObject.SetActive(false);
+                SetPartsCollected(GetPartsCollected() + 1);
+                other.gameObject.SetActive(false);
                     rightHand.SetActive(true);
                     SetORH(GetPartsCollected());
                     PrightHand = other.gameObject;
                 break;
 
                 case "body":
-                    other.gameObject.SetActive(false);
+                SetPartsCollected(GetPartsCollected() + 1);
+                other.gameObject.SetActive(false);
                     body.SetActive(true);
                     SetObody(GetPartsCollected());
                     Pbody = other.gameObject;
                 break;
 
                 case "heart":
+                if (GetPartsCollected() == 3)
+                {
+                    SetPartsCollected(GetPartsCollected() + 1);
                     other.gameObject.SetActive(false);
                     heart.SetActive(true);
                     SetOHeart(GetPartsCollected());
                     Pheart = other.gameObject;
+                }
                 break;
 
                 default:

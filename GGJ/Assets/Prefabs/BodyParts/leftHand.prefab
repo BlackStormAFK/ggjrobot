@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3998917689979145573}
   - component: {fileID: 4958151383853130429}
   - component: {fileID: 8471515777928048480}
+  - component: {fileID: -2271700185895245528}
   m_Layer: 0
-  m_Name: righthand.002
+  m_Name: leftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-2271700185895245528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649991812436131220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0010045551, y: 0.0013054953, z: 0.005494862}
+  m_Center: {x: 0.000035822854, y: -0.00003230019, z: -0.002490723}

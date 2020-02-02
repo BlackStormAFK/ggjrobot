@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float Force;
 
+    public Vector3 startingPosition;
 
    
 
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //controller = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
+        startingPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -72,7 +74,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Spikes")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = startingPosition;
         }
         
     }

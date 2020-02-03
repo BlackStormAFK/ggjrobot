@@ -62,24 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\LoadSceneScript.cs" />
-    <Compile Include="Assets\ProceduralNumberGenerator.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\gameplay_sound_switch.cs" />
     <Compile Include="Assets\Scripts\HuntAndKillMazeAlgorithm.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneScript.cs" />
     <Compile Include="Assets\Scripts\MazeAlgorithm.cs" />
     <Compile Include="Assets\Scripts\MazeCell.cs" />
     <Compile Include="Assets\Scripts\MazeLoader.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerPickUp.cs" />
+    <Compile Include="Assets\Scripts\ProceduralNumberGenerator.cs" />
+    <Compile Include="Assets\Scripts\seethrough.cs" />
     <Compile Include="Assets\Scripts\SFXAS.cs" />
     <Compile Include="Assets\Scripts\sound.cs" />
     <Compile Include="Assets\Scripts\SpikeCol.cs" />
     <Compile Include="Assets\Scripts\SpikeCollision.cs" />
-    <Compile Include="Assets\seethrough.cs" />
-    <Compile Include="Assets\sound.cs" />
-    <Compile Include="Assets\spikefx.cs" />
+    <Compile Include="Assets\Scripts\spikefx.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Kuro/Documents/GitHub/ggjrobot/GGJ/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

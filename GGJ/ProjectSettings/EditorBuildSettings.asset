@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/UIScene.unity
+    path: Assets/Scenes/UIScene.unity
     guid: f407cbbe09463be4a9e17b53cec2798d
   - enabled: 1
-    path: Assets/Sandbox.unity
+    path: Assets/Scenes/Sandbox.unity
     guid: 03ace6102d521654d82119a05e91f81e
   - enabled: 1
-    path: Assets/WON.unity
+    path: Assets/Scenes/WON.unity
     guid: 1506fca46a6c1c3489790b124331ac64
   m_configObjects: {}

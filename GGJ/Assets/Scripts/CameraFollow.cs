@@ -47,14 +47,24 @@ public class CameraFollow : MonoBehaviour
             if(hit.collider.gameObject.tag != "Player")
             {
                 Obstruction = hit.transform;
-                //if(Obstruction != lastObstruct)
-                //tempMat = Obstruction.gameObject.GetComponent<MeshRenderer>().material;
-                Obstruction.gameObject.GetComponent<MeshRenderer>().material = matToAssign; //shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-                lastObstruct = Obstruction;
-                //if(Vector3.Distance(Obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, target.position) >= 1.5f)
-                //{
-                //    transform.Translate(Vector3.forward * zoomSpeed * Time.deltaTime);
-                //}
+                if (lastObstruct == null)
+
+                {//tempMat = Obstruction.gameObject.GetComponent<MeshRenderer>().material;
+                 // Debug.Log("no obstruction");
+                    Obstruction.gameObject.GetComponent<MeshRenderer>().material = matToAssign; //shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                    lastObstruct = Obstruction;
+                    //if(Vector3.Distance(Obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, target.position) >= 1.5f)
+                    //{
+                    //    transform.Translate(Vector3.forward * zoomSpeed * Time.deltaTime);
+                    //}
+                }
+                else
+                {
+                    // Debug.Log("Last obstruct"+lastObstruct.gameObject.name);
+                    lastObstruct.gameObject.GetComponent<MeshRenderer>().material = tempMat; // = UnityEngine.Rendering.ShadowCastingMode.On;
+                    Obstruction.gameObject.GetComponent<MeshRenderer>().material = matToAssign; //shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                    lastObstruct = Obstruction;
+                }
             }
             else
             {

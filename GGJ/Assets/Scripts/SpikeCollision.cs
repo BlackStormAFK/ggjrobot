@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpikeCollision : MonoBehaviour
 {
@@ -15,31 +13,29 @@ public class SpikeCollision : MonoBehaviour
             Vector3 startingPosition = pM.startingPosition;
             transform.position = startingPosition;
             DestroyParts(pickUp.GetPartsCollected());
-            Debug.Log(pickUp.GetPartsCollected());
+
         }
 
     }
-    private void DestroyParts(int value) 
+    private void DestroyParts(int value)
     {
-        if (value > 1)
+        Debug.Log("Destroyed object position : " + value);
+        if (value >= 1)
         {
             destroyedItem = Mathf.Abs(Random.Range(1, value + 1));
-        }else
-        {
-            destroyedItem = 1;
-        }
             if (pickUp.GetObody() == destroyedItem)
             {
+                pickUp.SetObody(0);
                 pickUp.GetPBody().SetActive(true);
                 pickUp.GetBody().SetActive(false);
-                pickUp.SetPartsCollected(pickUp.GetPartsCollected()-1);
-                if(pickUp.GetOHeart() > destroyedItem)
+                pickUp.SetPartsCollected(pickUp.GetPartsCollected() - 1);
+                if (pickUp.GetOHeart() > destroyedItem)
                 {
-                    pickUp.SetOHeart(pickUp.GetOHeart()-1);
+                    pickUp.SetOHeart(pickUp.GetOHeart() - 1);
                 }
                 if (pickUp.GetOLH() > destroyedItem)
                 {
-                    pickUp.SetOLH(pickUp.GetOLH()-1);
+                    pickUp.SetOLH(pickUp.GetOLH() - 1);
                 }
                 if (pickUp.GetORH() > destroyedItem)
                 {
@@ -49,9 +45,10 @@ public class SpikeCollision : MonoBehaviour
             }
             if (pickUp.GetOLH() == destroyedItem)
             {
+                pickUp.SetOLH(0);
                 pickUp.GetPLeftHand().SetActive(true);
                 pickUp.GetLeftHand().SetActive(false);
-                pickUp.SetPartsCollected(pickUp.GetPartsCollected()-1);
+                pickUp.SetPartsCollected(pickUp.GetPartsCollected() - 1);
                 if (pickUp.GetOHeart() > destroyedItem)
                 {
                     pickUp.SetOHeart(pickUp.GetOHeart() - 1);
@@ -62,14 +59,15 @@ public class SpikeCollision : MonoBehaviour
                 }
                 if (pickUp.GetObody() > destroyedItem)
                 {
-                    pickUp.SetObody(pickUp.GetObody()-1);
+                    pickUp.SetObody(pickUp.GetObody() - 1);
                 }
-        }
+            }
             if (pickUp.GetORH() == destroyedItem)
             {
+                pickUp.SetORH(0);
                 pickUp.GetPRightHand().SetActive(true);
                 pickUp.GetRightHand().SetActive(false);
-                pickUp.SetPartsCollected(pickUp.GetPartsCollected()-1);
+                pickUp.SetPartsCollected(pickUp.GetPartsCollected() - 1);
                 if (pickUp.GetOHeart() > destroyedItem)
                 {
                     pickUp.SetOHeart(pickUp.GetOHeart() - 1);
@@ -82,27 +80,33 @@ public class SpikeCollision : MonoBehaviour
                 {
                     pickUp.SetObody(pickUp.GetObody() - 1);
                 }
-        }
+            }
             if (pickUp.GetOHeart() == destroyedItem)
             {
+                pickUp.SetOHeart(0);
                 pickUp.GetPHeart().SetActive(true);
                 pickUp.GetHeart().SetActive(false);
-                pickUp.SetPartsCollected(pickUp.GetPartsCollected()-1);
+                pickUp.SetPartsCollected(pickUp.GetPartsCollected() - 1);
                 if (pickUp.GetOLH() > destroyedItem)
                 {
                     pickUp.SetOLH(pickUp.GetOLH() - 1);
                 }
                 if (pickUp.GetORH() > destroyedItem)
                 {
-                    pickUp.SetORH(pickUp.GetORH()-1);
+                    pickUp.SetORH(pickUp.GetORH() - 1);
                 }
                 if (pickUp.GetObody() > destroyedItem)
                 {
                     pickUp.SetObody(pickUp.GetObody() - 1);
                 }
+            }/*else
+        {
+            destroyedItem = 1;
+        }*/
+
         }
-            
-             
+
+
     }
 
 }

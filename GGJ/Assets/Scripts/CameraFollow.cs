@@ -68,7 +68,7 @@ public class CameraFollow : MonoBehaviour
             }
             else
             {
-                Debug.Log(Obstruction.gameObject.name);
+               // Debug.Log(Obstruction.gameObject.name);
                 lastObstruct.gameObject.GetComponent<MeshRenderer>().material = tempMat; // = UnityEngine.Rendering.ShadowCastingMode.On;
                 //if (Vector3.Distance(transform.position, target.position) > 4.5f)
                 //{

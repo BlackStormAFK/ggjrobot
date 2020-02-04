@@ -15,7 +15,7 @@ public class SpikeCollision : MonoBehaviour
             Vector3 startingPosition = pM.startingPosition;
             transform.position = startingPosition;
             DestroyParts(pickUp.GetPartsCollected());
-
+            Debug.Log(pickUp.GetPartsCollected());
         }
 
     }

@@ -143,7 +143,7 @@ public class PlayerPickUp : MonoBehaviour
                 break;
 
                 case "heart":
-                if (GetPartsCollected() == 3)
+                if (leftHand.activeInHierarchy && rightHand.activeInHierarchy && body.activeInHierarchy)
                 {
                     SetPartsCollected(GetPartsCollected() + 1);
                     other.gameObject.SetActive(false);
